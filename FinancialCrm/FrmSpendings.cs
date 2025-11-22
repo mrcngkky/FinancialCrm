@@ -28,11 +28,7 @@ namespace FinancialCrm
             var values = db.Spendings.ToList();
             dataGridView1.DataSource = values;
 
-            // ---------------------------------------------------------
-            // 1. VERİ ÇEKME VE GRUPLAMA İŞLEMİ
-            // ---------------------------------------------------------
-            // Spendings ve Categories tablolarını birleştirip (Join),
-            // Kategori ismine göre gruplayıp, harcamaları topluyoruz.
+        
             var categoryTotalList = (from spending in db.Spendings
                                      join category in db.Categories
                                      on spending.CategoryId equals category.CategoryId
@@ -43,36 +39,27 @@ namespace FinancialCrm
                                          ToplamTutar = g.Sum(x => x.SpendingAmount)
                                      }).ToList();
 
-            // ---------------------------------------------------------
-            // 2. GRAFİK AYARLARI (chartCategoryAnalysis)
-            // ---------------------------------------------------------
-
-            // Önce eski verileri temizleyelim ki üst üste binmesin.
+            
             chartCategoryAnalysis.Series.Clear();
             chartCategoryAnalysis.Legends.Clear();
-            chartCategoryAnalysis.Legends.Add("Legend1"); // Açıklama kutusunu yeniden ekle
+            chartCategoryAnalysis.Legends.Add("Legend1"); 
 
-            // Yeni bir seri oluşturalım
+            
             var series = chartCategoryAnalysis.Series.Add("Kategoriler");
 
-            // Grafik türünü PASTA (Pie) yapalım
+            
             series.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
 
-            // (İsteğe Bağlı) Pasta grafiği biraz daha estetik görünsün diye paleti değiştirebiliriz
+            
             chartCategoryAnalysis.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
 
-            // ---------------------------------------------------------
-            // 3. VERİLERİ GRAFİĞE YAZDIRMA
-            // ---------------------------------------------------------
+            
             foreach (var item in categoryTotalList)
             {
-                // Değeri grafiğe ekle
+               
                 int pointIndex = series.Points.AddXY(item.KategoriAdi, item.ToplamTutar);
 
-                // Dilimlerin üzerinde ne yazacağını ayarlayalım
-                // Örnek Görünüm: 
-                // Yeme-İçme
-                // 460 ₺
+                /
                 series.Points[pointIndex].Label = $"{item.KategoriAdi}\n{item.ToplamTutar} ₺";
             }
 
