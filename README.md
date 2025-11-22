@@ -6,14 +6,14 @@ Bu proje, Murat Yücedağ'ın eğitmenliğinde gerçekleştirilen **C# Eğitim K
 ## 📂 İçerikler ve Özellikler
 Bu proje içerisinde aşağıdaki modüller ve yetenekler bulunmaktadır:
 
-* **Kullanıcı Girişi:** Güvenli giriş ve kayıt (Login/Register) formları.
+* **Kullanıcı Girişi:** Güvenli giriş.
 * **Kategori Yönetimi:** Harcama kategorilerini listeleme, ekleme, silme ve güncelleme işlemleri.
 * **Banka Entegrasyonu:** Banka bakiyeleri ve son 5 banka hareketinin görüntülenmesi.
 * **Fatura Takibi:** Fatura listeleme, yeni fatura girişi ve güncelleme modülü.
-* **Gider Analizi:** Toplam harcamalar, en çok/az harcanan kategoriler ve pasta grafikleri.
-* **Banka Hareketleri:** Seçilen bankaya göre detaylı hareket dökümü.
+* **Gider Analizi:** Toplam harcamalar, en çok harcanma, Ortalama Gider ,kategori Bazlo Analiz ve Son Gider işlemler.
+* **Banka Hareketleri:** Detaylı hareket dökümü.
 * **Dashboard:** Genel durum özetleri ve finansal grafikler.
-* **Ayarlar:** Kullanıcı şifre ve profil güncelleme işlemleri.
+* **Ayarlar:** Kullanıcı şifre güncelleme işlemleri.
 
 ## 📂 Kullanılan Teknolojiler
 * C# Programlama Dili
