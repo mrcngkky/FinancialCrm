@@ -10,7 +10,7 @@ Bu proje içerisinde aşağıdaki modüller ve yetenekler bulunmaktadır:
 * **Kategori Yönetimi:** Harcama kategorilerini listeleme, ekleme, silme ve güncelleme işlemleri.
 * **Banka Entegrasyonu:** Banka bakiyeleri ve son 5 banka hareketinin görüntülenmesi.
 * **Fatura Takibi:** Fatura listeleme, yeni fatura girişi ve güncelleme modülü.
-* **Gider Analizi:** Toplam harcamalar, en çok harcanma, Ortalama Gider ,kategori Bazlo Analiz ve Son Gider işlemler.
+* **Gider Analizi:** Toplam harcamalar, en çok harcanma, Ortalama Gider ,Kategori Bazlı Analiz ve Son Gider işlemler.
 * **Banka Hareketleri:** Detaylı hareket dökümü.
 * **Dashboard:** Genel durum özetleri ve finansal grafikler.
 * **Ayarlar:** Kullanıcı şifre güncelleme işlemleri.
